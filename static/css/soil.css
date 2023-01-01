@@ -1,0 +1,131 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+   
+   }
+   body{
+       background:linear-gradient(rgba(4, 9, 30, 0.781),rgba(4, 9, 30, 0.905)),url("bg.jpg") no-repeat center center fixed;
+       background-size:cover;
+   }
+   .navigation{
+       border:solid rgb(7, 7, 32);
+       width:100vw;
+       padding: 20px;
+       background-color: rgb(7, 7, 32);
+       margin-bottom: 10%;
+   
+   }
+   .navigation h1{
+       margin-right: -50px;
+       margin: 0 auto;
+   }
+   .navigation ul{
+       display: flex;
+       align-items: flex-end;
+   }
+   .navigation li{
+    list-style: none;
+     color: azure;
+     margin: 10px;
+     padding: 0.5%;
+   
+   }
+   .navigation li:hover{
+       cursor: pointer;
+       background-color: rgba(99, 99, 133, 0.701);
+   }
+   .dropdown .search-area {
+       box-sizing: border-box;
+       background-image: url("searchicon.png");
+       background-position: 14px 12px;
+       background-repeat: no-repeat;
+       font-size: 16px;
+       padding-top:5px;
+       border: none;
+       border-bottom: 1px solid #ddd;
+   }
+   
+   .dropdown .search-area:focus {
+       outline: 3px solid #ddd;
+   }
+   
+   .dropdown {
+       position: relative;
+       display: inline-block;
+       left:35px;
+      
+   }
+   
+   .dropdown-content {
+       display: none;
+       position: absolute;
+       overflow: auto;
+       border: 1px solid #ddd;
+       z-index: 1;
+       overflow-x: hidden;
+       background-color: rgb(167, 167, 220);
+   }
+   
+   .dropdown-content span {
+       color: rgb(30, 27, 27);
+       font-weight:200;
+       padding-top:5px;
+       text-decoration: none;
+       display: block;
+   }
+   
+   .dropdown span:hover {
+       background-color: #ddd;
+   }
+   
+   .show {
+       display: block;
+   }
+   input#search_input {
+       min-width: 191px;
+   }
+   .wrapper{
+   
+       margin:0 auto;
+       border: solid red;
+       width: 75%;
+       padding: 5%;
+   }
+   .dropdown{
+       margin-top: 45%;
+       margin: 15px;
+   }
+   p{
+       color: antiquewhite;
+       text-align: center;
+   }
+   input{
+       border:none;
+       padding: 2%;
+       font-weight: 300;
+       margin-right: 2%;
+   }
+   #myDropdown {
+       max-height: calc(4 * (1em + 8px));
+       
+     }
+   #dis_myDropdown {
+       max-height: calc(4 * (1em + 8px));
+     }
+   .submit input{
+       margin-top: 5%;
+       cursor: pointer;
+       border-style: double;
+       border: solid rgb(222, 98, 98);
+       border-radius: 22.5px;
+       color: rgb(214, 201, 182);
+       background-color: rgba(133, 198, 215, 0.86);
+     }
+     .submit input:hover{
+       background-color: rgb(92, 195, 161);
+       color:red;
+     }
+     #select_image{
+        margin:0 auto;
+     }

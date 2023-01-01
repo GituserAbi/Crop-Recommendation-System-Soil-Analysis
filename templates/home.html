@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href={{url_for('static' , filename = 'css/home.css')}}>
+<script src="{{url_for('static', filename='css/home.js')}}"></script>
+<body>
+    <nav class="navigation">
+        <ul>
+            <form action="" class="navi">
+                <h1 style="color: white;">CROP PREDICTION AND SOIL ANALYSIS</h1>
+                <li> <button class="opt" style="margin: 5px;">soil analysis</button > 
+                    <span>
+                    <button class="opt" style="margin: 5px;">crop production </button>
+                </span> </li>
+            </form>
+        </ul>
+    </nav>
+    <div class="wrapper">
+    <form class = "file-form" action="/result" method="post", enctype="multipart/form-data">
+        <div style="margin-left:-55px;" class="dropdown">
+            <div  class="state">
+        
+                    <p id="description">STATE</p>
+                    <select style="padding:10px;" name="state" id="st_dropdown" >
+                        <option value="27" >TAMIL NADU</option>
+                        <option value="15">KERALA</option>
+                        <option value="14">KARNATAKA</option>
+                        <option value="23">PONDICHERRY</option>
+                        <option value="28">TELUNGANA</option>
+                        <option value="8">GOA</option>
+                        <option value="1">ANDRA PRADESH</option>
+                    </select>
+            </div>
+        </div>
+        <div class="dropdown">
+            <p>DISTRICT</p>
+            <input onclick="openSearchDropdown()" id="dis_search_input" />
+            <div id="dis_myDropdown" class="dropdown-content">
+                <select type="number" placeholder="Search.." name="district" id="dis_search_value" onkeyup="filterSearchDropdown()" class="search-area" >
+                <option value="126" onclick="selectFilteredValue()">COIMBATORE</option>
+                <option value="163" onclick="selectFilteredValue()">DINDIGUL</option>
+                <option value="179" onclick="selectFilteredValue()">ERODE</option>
+                <option value="297" onclick="selectFilteredValue()">KARUR</option>
+                <option value="363" onclick="selectFilteredValue()">MADURAI</option>
+                </select>
+                
+            </div>
+        </div>
+        <div  class="dropdown">
+            <div  class="state">
+        
+                <p id="description">SEASONS</p>
+                <select name="seasons" id="st_dropdown" >
+                    <option style="color:black" value ='1'>KARIF</option>
+                    <option style="color:black" value='4'>WHOLE YEAR</option>
+                    <option style="color:black" value='2'>RABI</option>
+                    <option style="color:black" value='3'>SUMMER</option>
+                    <option style="color:black" value='5'>WINTER</option>
+                    <option style="color:black" value='0'>AUTUMN</option>
+
+                </select>
+            </div>
+        </div>
+            <div class="dropdown">
+                <p>YEAR</p>
+                <input type="number" name="year" min="1900" max="2099" step="1" value="2016" />
+            </div>
+            <div class="dropdown">
+                <p>CROPS</p>
+                <input onclick="cr_openSearchDropdown()" id="search_input" />
+                <div id="myDropdown" class="dropdown-content">
+                    <select type="number" placeholder="Search.." name="crops" id="search_value" onkeyup="cr_filterSearchDropdown()" class="search-area" >
+                    <option value="2" onclick="cr_selectFilteredValue()">Arecanut</option>
+                    <option value="74" onclick="cr_selectFilteredValue()">Other Kharif pulses</option>
+                    <option value="95" onclick="cr_selectFilteredValue()">Rice</option>
+                    <option value="7" onclick="cr_selectFilteredValue()">Banana</option>
+                    <option value="22" onclick="cr_selectFilteredValue()">Cashewnut</option>
+                    <option value="28" onclick="cr_selectFilteredValue()">Coconut </option>
+                    </select>
+                </div>
+            </div>
+            <div class="dropdown">
+                <p>AREA</p>
+                <input type="number" name="area" />
+            </div>
+
+            <div class="submit">
+              <center><input id='submits' type="submit" name="" id=""></center>  
+            </div>
+        
+           
+        
+        </div>
+        </form>
+    </div>
+</body>
+<script src="home.js"></script>
+</html>

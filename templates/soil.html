@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="cutom file input, styling, label, cross-browser, accessible, input type file" />
+    <title>Document</title>
+    <link rel="stylesheet" href="soil.css">
+    <link rel="stylesheet" href={{url_for('static' , filename = 'css/soil.css')}}>
+        <link rel="stylesheet" href={{url_for('static' , filename = 'css/soil.js')}}>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet" type='text/css'>
+        
+</head>
+<body>
+    <nav class="navigation">
+        <ul>
+            <h1 style="color: white;">CROP PREDICTION AND SOIL CLASSIFICATION</h1>
+            <a href="/"><li>soil analysis</li></a>
+           <a href="home.html"> <li>crop production</li></a>
+        </ul>
+    </nav>
+    <div class="wrapper">
+    <form class = "file-form" action="/success" method="post", enctype="multipart/form-data">
+            <div style="margin-left:43%;">
+                <img id="target" />
+               <input type="file" id="select_image" name="file" onchange="putImage()" />
+            </div>
+            
+
+            <div class="submit">
+              <center><input id='submits' type="submit" name="" id=""></center>  
+            </div>
+        </form>
+        </div>
+</body>
+<script src="soil.js"></script>
+</html>
